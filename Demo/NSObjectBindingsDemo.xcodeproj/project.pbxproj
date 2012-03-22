@@ -1,0 +1,305 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4FD2E16415198C4D00C95C0A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FD2E16315198C4D00C95C0A /* UIKit.framework */; };
+		4FD2E16615198C4D00C95C0A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FD2E16515198C4D00C95C0A /* Foundation.framework */; };
+		4FD2E16815198C4D00C95C0A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FD2E16715198C4D00C95C0A /* CoreGraphics.framework */; };
+		4FD2E16E15198C4D00C95C0A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4FD2E16C15198C4D00C95C0A /* InfoPlist.strings */; };
+		4FD2E17015198C4D00C95C0A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD2E16F15198C4D00C95C0A /* main.m */; };
+		4FD2E17415198C4D00C95C0A /* OCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD2E17315198C4D00C95C0A /* OCAppDelegate.m */; };
+		4FD2E17715198C4D00C95C0A /* OCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD2E17615198C4D00C95C0A /* OCViewController.m */; };
+		4FD2E17A15198C4D00C95C0A /* OCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FD2E17815198C4D00C95C0A /* OCViewController.xib */; };
+		4FD2E18915198C7B00C95C0A /* NSObject+OCBindingsAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD2E18615198C7B00C95C0A /* NSObject+OCBindingsAdditions.m */; };
+		4FD2E18A15198C7B00C95C0A /* OCBindingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD2E18815198C7B00C95C0A /* OCBindingsManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4FD2E15F15198C4D00C95C0A /* NSObjectBindingsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSObjectBindingsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FD2E16315198C4D00C95C0A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4FD2E16515198C4D00C95C0A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4FD2E16715198C4D00C95C0A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4FD2E16B15198C4D00C95C0A /* NSObjectBindingsDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NSObjectBindingsDemo-Info.plist"; sourceTree = "<group>"; };
+		4FD2E16D15198C4D00C95C0A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4FD2E16F15198C4D00C95C0A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4FD2E17115198C4D00C95C0A /* NSObjectBindingsDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObjectBindingsDemo-Prefix.pch"; sourceTree = "<group>"; };
+		4FD2E17215198C4D00C95C0A /* OCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCAppDelegate.h; sourceTree = "<group>"; };
+		4FD2E17315198C4D00C95C0A /* OCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCAppDelegate.m; sourceTree = "<group>"; };
+		4FD2E17515198C4D00C95C0A /* OCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCViewController.h; sourceTree = "<group>"; };
+		4FD2E17615198C4D00C95C0A /* OCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCViewController.m; sourceTree = "<group>"; };
+		4FD2E17915198C4D00C95C0A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/OCViewController.xib; sourceTree = "<group>"; };
+		4FD2E18515198C7B00C95C0A /* NSObject+OCBindingsAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+OCBindingsAdditions.h"; sourceTree = "<group>"; };
+		4FD2E18615198C7B00C95C0A /* NSObject+OCBindingsAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+OCBindingsAdditions.m"; sourceTree = "<group>"; };
+		4FD2E18715198C7B00C95C0A /* OCBindingsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCBindingsManager.h; sourceTree = "<group>"; };
+		4FD2E18815198C7B00C95C0A /* OCBindingsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCBindingsManager.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4FD2E15C15198C4D00C95C0A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FD2E16415198C4D00C95C0A /* UIKit.framework in Frameworks */,
+				4FD2E16615198C4D00C95C0A /* Foundation.framework in Frameworks */,
+				4FD2E16815198C4D00C95C0A /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4FD2E15415198C4D00C95C0A = {
+			isa = PBXGroup;
+			children = (
+				4FD2E18415198C7B00C95C0A /* NSObject-Bindings */,
+				4FD2E16915198C4D00C95C0A /* NSObjectBindingsDemo */,
+				4FD2E16215198C4D00C95C0A /* Frameworks */,
+				4FD2E16015198C4D00C95C0A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4FD2E16015198C4D00C95C0A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4FD2E15F15198C4D00C95C0A /* NSObjectBindingsDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4FD2E16215198C4D00C95C0A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4FD2E16315198C4D00C95C0A /* UIKit.framework */,
+				4FD2E16515198C4D00C95C0A /* Foundation.framework */,
+				4FD2E16715198C4D00C95C0A /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4FD2E16915198C4D00C95C0A /* NSObjectBindingsDemo */ = {
+			isa = PBXGroup;
+			children = (
+				4FD2E17215198C4D00C95C0A /* OCAppDelegate.h */,
+				4FD2E17315198C4D00C95C0A /* OCAppDelegate.m */,
+				4FD2E17515198C4D00C95C0A /* OCViewController.h */,
+				4FD2E17615198C4D00C95C0A /* OCViewController.m */,
+				4FD2E17815198C4D00C95C0A /* OCViewController.xib */,
+				4FD2E16A15198C4D00C95C0A /* Supporting Files */,
+			);
+			path = NSObjectBindingsDemo;
+			sourceTree = "<group>";
+		};
+		4FD2E16A15198C4D00C95C0A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4FD2E16B15198C4D00C95C0A /* NSObjectBindingsDemo-Info.plist */,
+				4FD2E16C15198C4D00C95C0A /* InfoPlist.strings */,
+				4FD2E16F15198C4D00C95C0A /* main.m */,
+				4FD2E17115198C4D00C95C0A /* NSObjectBindingsDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4FD2E18415198C7B00C95C0A /* NSObject-Bindings */ = {
+			isa = PBXGroup;
+			children = (
+				4FD2E18515198C7B00C95C0A /* NSObject+OCBindingsAdditions.h */,
+				4FD2E18615198C7B00C95C0A /* NSObject+OCBindingsAdditions.m */,
+				4FD2E18715198C7B00C95C0A /* OCBindingsManager.h */,
+				4FD2E18815198C7B00C95C0A /* OCBindingsManager.m */,
+			);
+			name = "NSObject-Bindings";
+			path = "../NSObject-Bindings";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4FD2E15E15198C4D00C95C0A /* NSObjectBindingsDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4FD2E17D15198C4D00C95C0A /* Build configuration list for PBXNativeTarget "NSObjectBindingsDemo" */;
+			buildPhases = (
+				4FD2E15B15198C4D00C95C0A /* Sources */,
+				4FD2E15C15198C4D00C95C0A /* Frameworks */,
+				4FD2E15D15198C4D00C95C0A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NSObjectBindingsDemo;
+			productName = NSObjectBindingsDemo;
+			productReference = 4FD2E15F15198C4D00C95C0A /* NSObjectBindingsDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4FD2E15615198C4D00C95C0A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = OC;
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Kenobi Studios";
+			};
+			buildConfigurationList = 4FD2E15915198C4D00C95C0A /* Build configuration list for PBXProject "NSObjectBindingsDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4FD2E15415198C4D00C95C0A;
+			productRefGroup = 4FD2E16015198C4D00C95C0A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4FD2E15E15198C4D00C95C0A /* NSObjectBindingsDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4FD2E15D15198C4D00C95C0A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FD2E16E15198C4D00C95C0A /* InfoPlist.strings in Resources */,
+				4FD2E17A15198C4D00C95C0A /* OCViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4FD2E15B15198C4D00C95C0A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FD2E17015198C4D00C95C0A /* main.m in Sources */,
+				4FD2E17415198C4D00C95C0A /* OCAppDelegate.m in Sources */,
+				4FD2E17715198C4D00C95C0A /* OCViewController.m in Sources */,
+				4FD2E18915198C7B00C95C0A /* NSObject+OCBindingsAdditions.m in Sources */,
+				4FD2E18A15198C7B00C95C0A /* OCBindingsManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4FD2E16C15198C4D00C95C0A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4FD2E16D15198C4D00C95C0A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4FD2E17815198C4D00C95C0A /* OCViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4FD2E17915198C4D00C95C0A /* en */,
+			);
+			name = OCViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4FD2E17B15198C4D00C95C0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4FD2E17C15198C4D00C95C0A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4FD2E17E15198C4D00C95C0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSObjectBindingsDemo/NSObjectBindingsDemo-Prefix.pch";
+				INFOPLIST_FILE = "NSObjectBindingsDemo/NSObjectBindingsDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4FD2E17F15198C4D00C95C0A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSObjectBindingsDemo/NSObjectBindingsDemo-Prefix.pch";
+				INFOPLIST_FILE = "NSObjectBindingsDemo/NSObjectBindingsDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4FD2E15915198C4D00C95C0A /* Build configuration list for PBXProject "NSObjectBindingsDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FD2E17B15198C4D00C95C0A /* Debug */,
+				4FD2E17C15198C4D00C95C0A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4FD2E17D15198C4D00C95C0A /* Build configuration list for PBXNativeTarget "NSObjectBindingsDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FD2E17E15198C4D00C95C0A /* Debug */,
+				4FD2E17F15198C4D00C95C0A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4FD2E15615198C4D00C95C0A /* Project object */;
+}
