@@ -32,8 +32,16 @@
 	[[OCBindingsManager sharedManager] removeAllBindingsForObject:self];
 }
 
++ (void)unbindBindingWithUUID:(NSString *)bindingUUID {
+	[[OCBindingsManager sharedManager] removeBindingWithIdentifier:bindingUUID];
+}
+
 + (void)unbindBindingWithIdentifier:(NSString *)bindingIdentifier {
 	[[OCBindingsManager sharedManager] removeBindingWithIdentifier:bindingIdentifier];
+}
+
++ (void)unbindBindingsWithIdentifier:(NSString *)identifier {
+	[[OCBindingsManager sharedManager] removeAllBindingsWithIdentifier:identifier];
 }
 
 #pragma mark - Block-based bindings
@@ -46,6 +54,7 @@
 	[binding setObserved:object];
 	[binding setObservedKeyPath:keyPath];
 	[binding setBlock:block];
+	[binding setOptions:options];
 	
 	return [[OCBindingsManager sharedManager] addBinding:binding];
 }
@@ -59,10 +68,9 @@
 	OCNotificationBinding *binding = [OCNotificationBinding new];
 	[binding setNotificationName:notificationName];
 	[binding setBlock:block];
+	[binding setOptions:options];
 	
 	return [[OCBindingsManager sharedManager] addBinding:binding];
 }
-
-
 
 @end

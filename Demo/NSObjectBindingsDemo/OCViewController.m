@@ -9,6 +9,8 @@
 #import "NSObject+OCBindingsAdditions.h"
 #import "OCViewController.h"
 
+static NSString * const kBindingsIdentifier = @"MyBindings";
+
 @interface OCViewController ()
 @property (strong, nonatomic) IBOutlet UIButton *clickmeButton;
 @property (strong, nonatomic) IBOutlet UILabel *middleLabel;
@@ -64,8 +66,11 @@
 #pragma mark - This is where the magic happens
 
 - (IBAction)addBindings:(id)sender {
+	
+	NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:kBindingsIdentifier, OCBindingIdentifierOptionKey, nil];
+
 	// Update the controller view's background whenever the color property changes
-	[self.view bindKeyPath:@"backgroundColor" toObject:self withKeyPath:@"color" options:nil];
+	[self.view bindKeyPath:@"backgroundColor" toObject:self withKeyPath:@"color" options:options];
 	
 	
 	// Update the middle label's text whenever the controller's title changes
@@ -93,6 +98,9 @@
 }
 
 - (IBAction)removeBindings:(id)sender {
+	// Remove bindings with the identifier option
+	[NSObject unbindBindingsWithIdentifierOption:kBindingsIdentifier];
+
 	// Remove the notification binding
 	[NSObject unbindBindingWithIdentifier:self.notificationBindingIdentifier];
 	

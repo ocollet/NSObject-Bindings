@@ -76,14 +76,29 @@ Removes all the bindings on `blogPost`.
 	[blogPost unbind];
 
 
-#### unbindBindingWithIdentifier:
+#### unbindBindingWithUUID:
 
 Removes the binding with a unique identifier
 
-	[NSObject unbindBindingWithIdentifier:notificationBindingIdentifier];
+	[NSObject unbindBindingWithUUID:notificationBindingIdentifier];
+
+
+#### unbindBindingsWithIdentifier:
+
+Removes all the bindings that have `@"MyIdentifier"` as the value for the `OCBindingIdentifierOptionKey` option key. See **Options** for more information.
+
+	[NSObject unbindBindingsWithIdentifier:@"MyIdentifier"];
 
 
 
+
+## Options
+
+When creating a binding you can use the following keys to set options in the `options` dictionary.
+
+### OCBindingIdentifierOptionKey
+
+A NSString that you can use to remove bindings with `unbindBindingsWithIdentifier:`.
 
 ## Important
 

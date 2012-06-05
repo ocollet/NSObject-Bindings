@@ -52,4 +52,6 @@ typedef void(^OCBindingBlock)(id value);
 
 - (void)removeAllBindingsForNotification:(NSString *)notificationName;
 
+- (void)removeAllBindingsWithIdentifier:(NSString *)identifier;
+
 @end

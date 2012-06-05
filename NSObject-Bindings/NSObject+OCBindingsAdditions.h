@@ -7,11 +7,18 @@
 
 #import <Foundation/Foundation.h>
 
-
 /*	WARNING: Make sure you remove all the bindings on any object before releasing it.
  *			 This implementation retains all the objects being observed, as well as
  *			 the ones being notified of changes.
  */
+
+/*
+ * Option keys
+ *
+ * Use these keys in the options dictionary.
+ */
+extern NSString * const OCBindingIdentifierOptionKey; // NSString: an identifier to be used to unbind bindings with the unbindBindingsWithIdentifier: method.
+
 
 @interface NSObject (OCBindingsAdditions)
 
@@ -69,6 +76,14 @@
  
  @param 	identifier	A unique binding identifier returned by any method used to create a binding
  */
-+ (void)unbindBindingWithIdentifier:(NSString *)bindingIdentifier;
++ (void)unbindBindingWithUUID:(NSString *)bindingUUID;
++ (void)unbindBindingWithIdentifier:(NSString *)bindingIdentifier __attribute__((__deprecated__("Use unbindBindingWithUUID: instead.")));
+
+/** 
+ Remove all bindings that have identifierOption for OCBindingIdentifierOptionKey.
+ 
+ @param 	identifier	A string set for OCBindingIdentifierOptionKey in the binding options
+ */
++ (void)unbindBindingsWithIdentifier:(NSString *)identifier;
 
 @end

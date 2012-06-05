@@ -6,7 +6,12 @@
 //  Copyright (c) 2012 Olivier Collet. All rights reserved.
 //
 
+#import "NSObject+OCBindingsAdditions.h"
 #import "OCBindingsManager.h"
+
+NSString * const OCBindingIdentifierOptionKey = @"OCBindingOptionGroupKey";
+
+//
 
 @interface OCBinding ()
 @property (strong,nonatomic,readwrite) NSString *identifier;
@@ -88,6 +93,24 @@
 	return UUIDString;
 }
 
+- (void)removeBinding:(OCBinding *)binding {
+	if ([binding isKindOfClass:[OCNotificationBinding class]]) {
+		[[NSNotificationCenter defaultCenter] removeObserver:self name:[(OCNotificationBinding *)binding notificationName] object:nil];
+		[self.notificationBindings removeObject:binding];
+	}
+	else {
+		if (binding.observed) {
+			if (binding.observedKeyPath) {
+				[binding.observed removeObserver:self forKeyPath:binding.observedKeyPath];
+			}
+			else {
+				[binding.observed removeObserver:self];
+			}
+		}
+		[self.bindings removeObject:binding];
+	}
+}
+
 - (void)removeAllBindingsForObject:(id)object keyPath:(NSString *)keyPath {
 	NSArray *bindings = [self bindingsForKeyPath:keyPath ofObservedObject:object];
 	NSMutableArray *toRemove = [NSMutableArray array];
@@ -118,7 +141,7 @@
 	// KVO binding
 	for (OCBinding *binding in self.bindings) {
 		if ([binding.identifier isEqualToString:identifier]) {
-			[self.bindings removeObject:binding];
+			[self removeBinding:binding];
 			return;
 		}
 	}
@@ -126,10 +149,26 @@
 	// Notification binding
 	for (OCNotificationBinding *binding in self.notificationBindings) {
 		if ([binding.identifier isEqualToString:identifier]) {
-			[[NSNotificationCenter defaultCenter] removeObserver:self name:binding.notificationName object:nil];
-			[self.notificationBindings removeObject:binding];
+			[self removeBinding:binding];
 			return;
 		}
+	}
+}
+
+- (void)removeAllBindingsWithIdentifier:(NSString *)identifier {
+	NSMutableSet *toRemove = [NSMutableSet set];
+	NSArray *allBindings = [self.bindings arrayByAddingObjectsFromArray:self.notificationBindings];
+
+	// Find the bindings that contain the groupKey
+	for (OCBinding *binding in allBindings) {
+		if ([[binding.options valueForKey:OCBindingIdentifierOptionKey] isEqualToString:identifier]) {
+			[toRemove addObject:binding];
+		}
+	}
+
+	// Remove the bindings
+	for (OCBinding *binding in toRemove) {
+		[self removeBinding:binding];
 	}
 }
 
