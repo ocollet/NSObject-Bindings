@@ -190,7 +190,7 @@ NSString * const OCBindingIdentifierOptionKey = @"OCBindingOptionGroupKey";
 #pragma mark - Notifications
 
 - (void)addNotificationBinding:(OCNotificationBinding *)binding {
-	NSAssert(binding.notificationName, @"\n\nBINDING: Binding to an inexistent notification. %@\n\n");
+	NSAssert(binding.notificationName, @"\n\nBINDING: Binding to an inexistent notification.\n\n");
 	[self.notificationBindings addObject:binding];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(observeNotification:) name:binding.notificationName object:nil];
 }

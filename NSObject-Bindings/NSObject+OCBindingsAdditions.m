@@ -48,7 +48,7 @@
 
 + (NSString *)bindBlock:(void (^)(id value))block toObject:(id)object withKeyPath:(NSString *)keyPath options:(NSDictionary *)options {
 	NSAssert([object respondsToSelector:NSSelectorFromString(keyPath)], @"\n\nBINDING: Binding to inexistent keyPath: '%@' on object: %@\n\n", keyPath, object);
-	NSAssert(block, @"\n\nBINDING: Binding a nil block. %@\n\n");
+	NSAssert(block, @"\n\nBINDING: Binding a nil block.\n\n");
 
 	OCBlockBinding *binding = [OCBlockBinding new];
 	[binding setObserved:object];
@@ -62,8 +62,8 @@
 #pragma mark - Notification-based bindings
 
 + (NSString *)bindBlock:(void (^)(id notification))block toNotification:(NSString *)notificationName options:(NSDictionary *)options {
-	NSAssert(notificationName, @"\n\nBINDING: Binding to an inexistent notification. %@\n\n");
-	NSAssert(block, @"\n\nBINDING: Binding a nil block. %@\n\n");
+	NSAssert(notificationName, @"\n\nBINDING: Binding to an inexistent notification.\n\n");
+	NSAssert(block, @"\n\nBINDING: Binding a nil block.\n\n");
 
 	OCNotificationBinding *binding = [OCNotificationBinding new];
 	[binding setNotificationName:notificationName];
